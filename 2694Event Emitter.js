@@ -1,30 +1,25 @@
 class EventEmitter {
-  eventCallbacks={};
-  subscribe(event, cb) {
-    if (this.eventCallbacks[event]){
-      this.eventCallbacks[event].push(cb);
-    }else{
-      this.eventCallbacks[event]=[cb];
+    constructor() {
+        this.events = {};
     }
-      
-    return {
+
+    subscribe(event, cb) {
+      this.events[event] = this.events[event] ?? [];
+      this.events[event].push(cb);
+
+      return {
         unsubscribe: () => {
-          if (this.eventCallbacks[event] && this.eventCallbacks[event].length>1){
-            this.eventCallbacks[event].pop();
-          }else{
-            delete this.eventCallbacks[event];
-          }
-        }
-    };
-  }
-
-  emit(event, args = []) {
-    if (this.eventCallbacks[event]){
-      return this.eventCallbacks[event].map(cb=>cb(...args));
+          this.events[event] = this.events[event].filter(f => f !== cb);
+          //To avoid memory leaks adding a cleanup condition
+          if (this.events[event].length === 0) { delete this.events[event] }
+        },
+      };
     }
-    return [];
 
-  }
+    emit(event, args = []) {
+        if (!(event in this.events)) return [];
+        return this.events[event].map(f => f(...args));
+    }
 }
 
 /**

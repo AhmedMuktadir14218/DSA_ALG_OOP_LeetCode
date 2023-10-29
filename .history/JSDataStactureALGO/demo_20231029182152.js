@@ -38,8 +38,8 @@ console.log(z)
 // Linear Search
 // checki Sum zero problem
 // [-5,-4,-3,-2,-1,0,2,4,6,8]
-// Complexity O(n)
 
+// Complexity O(n^2)
 const linearSumPairZero = (array)=>{
 
     let left =0;

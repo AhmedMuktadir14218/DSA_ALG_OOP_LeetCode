@@ -30,5 +30,5 @@ const getSumPairZero2 = (array) =>{
         }
     }
 }
-const z= getSumPairZero2([-5,-4,-3,-2,-1,0,2,4,6,8]);
+const z= getSumPairZero([-5,-4,-3,-2,-1,0,2,4,6,8]);
 console.log(z)

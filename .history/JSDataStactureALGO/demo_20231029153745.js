@@ -13,12 +13,7 @@ function getSumPairZero(array){
         }
     }
 }
-
-
-const x = getSumPairZero([-5,-4,-3,-2,-1,0,2,4,6,8])
-console.log(x);
-
-let =[-5,-4,-3,-2,-1,0,2,4,6,8]
+ let =
 const y = (array) =>{
     for (let number of array) {
         // console.log(number)
@@ -30,4 +25,6 @@ const y = (array) =>{
         }
     }
 }
-console.log(y)
+
+const x = getSumPairZero([-5,-4,-3,-2,-1,0,2,4,6,8])
+console.log(x);

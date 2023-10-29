@@ -1,0 +1,1 @@
+// checki Sum zero p

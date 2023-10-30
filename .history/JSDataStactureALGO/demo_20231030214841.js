@@ -70,7 +70,7 @@ const Anagram = (str1,str2) =>{
         return false
     }
     let counter = {}
-    for(let i of str1){
+    for(i of str1){
         // counter[i] = (counter[i] || 0) +1
         counter[i] = (counter[i] || 0) +1
         // console.log(counter[i])
@@ -80,11 +80,10 @@ const Anagram = (str1,str2) =>{
             return false
         }
         counter[j]-=1
-        console.log(counter[j])
-        
+        // console.log(counter[j])
     }
     return true
 }
 
 const strr = Anagram('hello','lleho')
-console.log(strr)
+// console.log(strr)

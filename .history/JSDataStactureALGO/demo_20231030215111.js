@@ -80,8 +80,7 @@ const Anagram = (str1,str2) =>{
             return false
         }
         counter[j]-=1
-        console.log(counter[j])
-        
+        // console.log(counter[j])
     }
     return true
 }

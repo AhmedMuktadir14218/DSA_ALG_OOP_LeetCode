@@ -74,5 +74,5 @@ const Anagram = (str1,str2) =>{
     }
 }
 
-const strr = Anagram("hello","lleho")
+const strr = Anagram("hello","llehoo")
 console.log(strr)

@@ -67,11 +67,9 @@ console.log(k)
 
 const Anagram = (str1,str2) =>{
     if (str1.length != str2.length) {
-        return "Not an anagram";
+        return true;
     }
-    for(i of str1){
-        console.log(i)
-    }
+    for(i of str1)
 }
 
 const strr = Anagram("hello","lleho")

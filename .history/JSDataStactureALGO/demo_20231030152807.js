@@ -62,17 +62,4 @@ const k= linearSumPairZero([-5,-4,-3,-2,-1,0,2,4,6,8]);
 console.log(k)
 
 
-//String Anagram
-//"hello" -> "llehoo"
-
-const Anagram = (str1,str2) =>{
-    if (str1.length != str2.length) {
-        return "Not an anagram";
-    }
-    for(i of str1){
-        console.log(i)
-    }
-}
-
-const strr = Anagram("hello","lleho")
-console.log(strr)
+//String Anag
